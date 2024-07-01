@@ -1,0 +1,54 @@
+
+body {
+    background-image: url(hero-slider-1.jpg);
+    height: 100vh;
+    
+    
+    background-size: 110% 110%;
+    background-position: center center;
+    animation: shrink 5s infinite alternate;
+    color: white;
+    font-size: 20px;
+  }
+  @keyframes shrink {
+    0% {
+      background-size: 110% 110%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+ 
+ 
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+   
+    color: gold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.about-content {
+   
+
+   
+    max-width: 2000px;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin: 0 0 1em;
+    max-width: 500px;
+}
+
+

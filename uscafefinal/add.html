@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f7f7f7; /* Background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent background overflow */
+            position: relative; /* Relative positioning for absolute background */
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: radial-gradient(circle, brown 10%, transparent 10%),
+                              radial-gradient(circle, yellow 10%, transparent 10%);
+            background-position: 0 0, 50px 50px; /* Adjust position */
+            background-size: 100px 100px; /* Adjust size */
+            animation: backgroundMove 5s linear infinite; /* Adjust animation duration */
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0 0, 50px 50px;
+            }
+            100% {
+                background-position: 100px 100px, 150px 150px;
+            }
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 300px;
+            z-index: 1; /* Ensure form is on top of the background */
+            position: relative; /* Position form relative to the body */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <form id="login-form" action="#">
+        <h2>Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Store login data in localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+
+            alert("Login data stored locally.");
+            
+            // Redirect to index page
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width:100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.reservation-form {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="date"],input[type="visiting"],input[type="guests"]{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    padding-bottom:4px;
+
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding:5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+
+  .icon {
+    padding:10px;
+    background: dodgerblue;
+    color: white;
+    min-width:3px;
+    height:16.5px;
+    text-align: center;
+  }
+
+  .input-icons i{
+    position:absolute;
+  }
